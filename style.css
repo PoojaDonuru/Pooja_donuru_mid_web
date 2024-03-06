@@ -1,0 +1,237 @@
+body {
+    font-family: Comic, cursive;
+    background-color: #e1e0e0; 
+    color: #0d0d0d; 
+    margin: 0;
+    padding: 0px;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 0px; 
+    box-sizing: border-box; 
+}
+
+.header {
+    text-align: center;
+    padding: 10px;
+    color: rgb(25, 44, 21);
+    
+}
+
+.nav-menu {
+    background-color: #555;
+    padding: 5px; 
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 10;
+    margin-bottom: 0px; 
+}
+
+nav ul {
+    list-style-type: none;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+    padding-bottom: 30px;
+}
+
+nav li {
+    margin: 0px; 
+    font-size: medium;
+    padding: auto;
+}
+
+nav li:hover {
+    background-color: #959494; 
+}
+
+nav a {
+    text-decoration: none;
+    color: #0b0b0b;
+    font-weight: bold;
+}
+
+#profilepicture img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 30%;
+}
+
+.about,
+.papers,
+.hobbies,
+.Images,
+.blog {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #320404;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #070807;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+a:hover {
+    background-color: #959494;
+}
+
+.blog {
+    text-align: center; 
+}
+
+.blog-post {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    background-color: rgb(83, 85, 85);
+    padding: 20px;
+    margin-bottom: 20px; 
+}
+
+.blog-post h3 {
+    color: #555;
+    font-size: 1em; 
+}
+
+
+.papers {
+    text-align: center; 
+}
+
+.papers-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.paper {
+    text-align: left;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.paper-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.paper h3 {
+    color: #555;
+}
+
+.paper p {
+    margin: 5px 0;
+}
+
+
+.Image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+
+.Image-list {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+
+.Image-list img {
+    width: 100%; 
+    height: auto;
+    display: block;
+    border-radius: 10px; 
+}
+
+.Image-list p {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+}
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    padding: 20px;
+    margin-bottom: 50px; 
+}
+
+.hobbies-list {
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.9em; 
+    background-color: rgb(101, 102, 102);
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    nav li {
+        margin: 5px;
+    }
+
+    .Image-grid,
+    .hobbies-grid,
+    .papers-list,
+    .blog-post {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header h1 {
+        font-size: 1.2em;
+    }
+
+    nav {
+        font-size: 0.9em;
+    }
+
+    .Image-grid,
+    .Image-list p {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .hobbies-grid,
+    .hobbies-list {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
